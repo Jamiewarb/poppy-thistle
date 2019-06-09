@@ -2,8 +2,11 @@
   <span>Test</span>
 </template>
 
-<script>
-export default {
-  name: 'HomePage'
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component
+export default class HomePage extends Vue {
+
 }
 </script>

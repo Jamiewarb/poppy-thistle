@@ -4,8 +4,12 @@ module.exports = {
     browser: true,
     node: true
   },
+  plugins: ['@typescript-eslint'],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   extends: [
     '@nuxtjs',
@@ -13,5 +17,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    '@typescript-eslint/no-unused-vars': 'error'
   }
 }

@@ -54,7 +54,7 @@ const config: NuxtConfiguration = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend(config, ctx) { // eslint-disable-line @typescript-eslint/no-unused-vars
 
     }
   }

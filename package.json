@@ -4,6 +4,7 @@
   "description": "Poppy and Thistle e-comm site",
   "author": "Jamie Warburton",
   "private": true,
+  "precommit": "yarn lint",
   "scripts": {
     "lint": "eslint . --ext .ts,.js,.vue --ignore-path .gitignore",
     "precommit": "yarn run lint",

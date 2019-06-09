@@ -4,10 +4,14 @@
   "description": "Poppy and Thistle e-comm site",
   "author": "Jamie Warburton",
   "private": true,
-  "precommit": "yarn lint",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
+    }
+  },
   "scripts": {
     "lint": "eslint . --ext .ts,.js,.vue --ignore-path .gitignore",
-    "precommit": "yarn run lint",
     "test": "jest",
     "dev": "nuxt",
     "build": "nuxt build",
@@ -41,6 +45,7 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
+    "husky": "^2.4.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "vue-jest": "^3.0.3"

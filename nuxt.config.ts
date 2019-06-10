@@ -19,14 +19,20 @@ const config: NuxtConfiguration = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
+  /*
+  ** Environment variables
+  */
+  env: {
+    adminEmail: process.env.ADMIN_EMAIL || ''
+  },
   /*
   ** Global CSS
   */
   css: ['assets/scss/app.scss'],
-  /**
-   * Style Resources module configuration
-   */
+  /*
+  ** Style Resources module configuration
+  */
   styleResources: {
     scss: ['assets/scss/settings-tools.scss']
   },

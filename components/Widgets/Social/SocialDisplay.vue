@@ -1,30 +1,45 @@
 <template>
   <div class="v-social-display">
     <span class="v-social-display__icon">
-      <SocialIcon type="facebook" />
+      <SocialIcon
+        page-url="https://facebook.com/"
+        type="facebook"
+      />
     </span>
     <span class="v-social-display__icon">
-      <SocialIcon type="pinterest" />
+      <SocialIcon
+        page-url="https://pinterest.com/"
+        type="pinterest"
+      />
     </span>
     <span class="v-social-display__icon">
-      <SocialIcon type="instagram" />
+      <SocialIcon
+        page-url="https://instagram.com/"
+        type="instagram"
+      />
     </span>
     <span class="v-social-display__icon">
-      <SocialIcon type="email" />
+      <SocialIcon
+        v-if="adminEmail.length"
+        :page-url="`mailto:${adminEmail}`"
+        type="email"
+      />
     </span>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import SocialIcon from '~/components/Widgets/SocialIcon.vue'
+import SocialIcon from './SocialIcon.vue'
 
 @Component({
   components: {
     SocialIcon
   }
 })
-export default class SocialDisplay extends Vue {}
+export default class SocialDisplay extends Vue {
+  adminEmail = process.env.adminUrl
+}
 </script>
 
 <style lang="scss" scoped>

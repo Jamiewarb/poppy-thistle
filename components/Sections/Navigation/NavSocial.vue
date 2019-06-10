@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import SocialDisplay from '~/components/Widgets/SocialDisplay.vue'
+import SocialDisplay from '~/components/Widgets/Social/SocialDisplay.vue'
 
 @Component({
   components: {

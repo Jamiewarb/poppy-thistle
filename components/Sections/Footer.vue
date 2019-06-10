@@ -1,7 +1,9 @@
 <template>
-  <Wrapper>
-    <span>Homepage content</span>
-  </Wrapper>
+  <footer class="v-footer">
+    <Wrapper>
+      Footer
+    </Wrapper>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -13,5 +15,11 @@ import Wrapper from '~/components/Layout/Wrapper.vue'
     Wrapper
   }
 })
-export default class HomePage extends Vue {}
+export default class Footer extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.v-footer {
+  background-color: blue;
+}
+</style>

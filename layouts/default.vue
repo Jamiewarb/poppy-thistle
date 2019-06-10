@@ -1,20 +1,25 @@
 <template>
   <div>
-    <nav class="navbar header has-shadow">
-      Nav
-    </nav>
+    <Navbar />
 
-    <section>
+    <main>
       <nuxt />
-    </section>
+    </main>
+
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import Navbar from '~/components/Sections/Navigation/Navbar.vue'
+import Footer from '~/components/Sections/Footer.vue'
 
-@Component
-export default class DefaultLayout extends Vue {
-
-}
+@Component({
+  components: {
+    Navbar,
+    Footer
+  }
+})
+export default class DefaultLayout extends Vue {}
 </script>

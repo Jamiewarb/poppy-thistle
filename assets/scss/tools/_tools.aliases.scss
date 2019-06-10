@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #ALIASES
+   ========================================================================== */
+
+/**
+ * The aliases tools file contains aliases for shortening long variable, mixin
+ * and function names to make them easier to use throughout the project.
+ */
+
+@function r($_component) {
+    @return responsive($_component);
+}
+
+@function z($_value) {
+    @return z-index($_value);
+}

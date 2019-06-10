@@ -23,8 +23,13 @@ const config: NuxtConfiguration = {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['assets/scss/app.scss'],
+  /**
+   * Style Resources module configuration
+   */
+  styleResources: {
+    scss: ['assets/scss/settings-tools.scss']
+  },
   /*
   ** Plugins to load before mounting the App
   */
@@ -34,12 +39,11 @@ const config: NuxtConfiguration = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Axios module configuration

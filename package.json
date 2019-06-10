@@ -22,7 +22,6 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.2",
     "ts-node": "^8.2.0",
     "vue-property-decorator": "^8.1.1",
     "vuex-class": "^0.3.2"
@@ -31,6 +30,7 @@
     "@nuxt/typescript": "^2.8.1",
     "@nuxtjs/eslint-config": "^0.0.1",
     "@nuxtjs/eslint-module": "^0.0.1",
+    "@nuxtjs/style-resources": "^0.1.2",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
@@ -46,8 +46,12 @@
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "husky": "^2.4.0",
+    "inuitcss": "^6.0.0",
+    "inuitcss-hex": "^1.0.7",
     "jest": "^24.1.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0",
     "vue-jest": "^3.0.3"
   }
 }

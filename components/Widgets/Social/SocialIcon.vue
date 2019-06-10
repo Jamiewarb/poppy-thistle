@@ -1,5 +1,5 @@
 <template functional>
-  <a class="v-social-icon" :href="pageUrl">
+  <a class="v-social-icon" :href="props.url">
     <img
       :alt="props.type"
       class="v-social-icon__image"
@@ -14,7 +14,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 @Component
 export default class SocialIcon extends Vue {
   @Prop({ type: String, required: true })
-  readonly pageUrl!: string
+  readonly url!: string
   @Prop({ type: String, required: true })
   readonly type!: string
 }

@@ -2,26 +2,26 @@
   <div class="v-social-display">
     <span class="v-social-display__icon">
       <SocialIcon
-        page-url="https://facebook.com/"
+        url="https://facebook.com/"
         type="facebook"
       />
     </span>
     <span class="v-social-display__icon">
       <SocialIcon
-        page-url="https://pinterest.com/"
+        url="https://pinterest.com/"
         type="pinterest"
       />
     </span>
     <span class="v-social-display__icon">
       <SocialIcon
-        page-url="https://instagram.com/"
+        url="https://instagram.com/"
         type="instagram"
       />
     </span>
     <span class="v-social-display__icon">
       <SocialIcon
-        v-if="adminEmail.length"
-        :page-url="`mailto:${adminEmail}`"
+        v-if="!!adminEmail"
+        :url="`mailto:${adminEmail}`"
         type="email"
       />
     </span>
@@ -38,7 +38,7 @@ import SocialIcon from './SocialIcon.vue'
   }
 })
 export default class SocialDisplay extends Vue {
-  adminEmail = process.env.adminUrl
+  adminEmail: string = process.env.adminEmail
 }
 </script>
 

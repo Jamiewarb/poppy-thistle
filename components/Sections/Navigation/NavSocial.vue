@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <SocialDisplay />
-  </div>
+  <SocialDisplay />
 </template>
 
 <script lang="ts">
@@ -15,8 +13,3 @@ import SocialDisplay from '~/components/Widgets/Social/SocialDisplay.vue'
 })
 export default class NavSocial extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.v-nav-social {
-}
-</style>

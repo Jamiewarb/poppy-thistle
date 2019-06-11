@@ -20,8 +20,8 @@ $inuit-wrapper-width: 1200px !default;
 
 .o-wrapper {
   @include inuit-clearfix();
-  padding-right: $inuit-global-spacing-unit;
-  padding-left:  $inuit-global-spacing-unit;
+  padding-right: spacing-unit();
+  padding-left:  spacing-unit();
   margin-right: auto;
   margin-left:  auto;
   max-width: $inuit-wrapper-width;

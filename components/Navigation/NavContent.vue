@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import NavLogo from '~/components/Sections/Navigation/NavLogo.vue'
+import NavLogo from './NavLogo.vue'
 
 @Component({
   components: {
@@ -20,6 +20,6 @@ export default class NavContent extends Vue {}
 .v-nav-content {
   display: flex;
   justify-content: center;
-  padding-top: $inuit-global-spacing-unit-large;
+  padding: spacing-unit('large') 0 spacing-unit();
 }
 </style>

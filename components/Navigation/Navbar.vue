@@ -5,6 +5,7 @@
         <NavSocial class="v-nav__social" />
         <NavContent class="v-nav__content" />
         <NavControls class="v-nav__controls" />
+        <NavLinks class="v-nav__links" />
       </div>
     </Wrapper>
   </nav>
@@ -13,16 +14,18 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import Wrapper from '~/components/Layout/Wrapper.vue'
-import NavSocial from '~/components/Sections/Navigation/NavSocial.vue'
-import NavContent from '~/components/Sections/Navigation/NavContent.vue'
-import NavControls from '~/components/Sections/Navigation/NavControls.vue'
+import NavSocial from './NavSocial.vue'
+import NavContent from './NavContent.vue'
+import NavControls from './NavControls.vue'
+import NavLinks from './NavLinks.vue'
 
 @Component({
   components: {
     Wrapper,
     NavSocial,
     NavContent,
-    NavControls
+    NavControls,
+    NavLinks
   }
 })
 export default class Navbar extends Vue {}
@@ -30,7 +33,7 @@ export default class Navbar extends Vue {}
 
 <style lang="scss" scoped>
 .v-nav {
-  margin-top: $inuit-global-spacing-unit;
+  margin: spacing-unit() 0;
 }
 
 .v-nav__social,

@@ -38,7 +38,7 @@ import SocialIcon from './SocialIcon.vue'
   }
 })
 export default class SocialDisplay extends Vue {
-  adminEmail: string = process.env.adminEmail
+  adminEmail: string = process.env.ADMIN_EMAIL || ''
 }
 </script>
 
@@ -48,7 +48,7 @@ export default class SocialDisplay extends Vue {
 }
 
 .v-social-display__icon {
-  margin-top: -$inuit-global-spacing-unit-tiny;
-  padding: $inuit-global-spacing-unit-tiny;
+  margin-top: -#{spacing-unit('tiny')};
+  padding: spacing-unit('tiny');
 }
 </style>

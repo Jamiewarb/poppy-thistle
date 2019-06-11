@@ -12,8 +12,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import Navbar from '~/components/Sections/Navigation/Navbar.vue'
-import Footer from '~/components/Sections/Footer.vue'
+import Navbar from '~/components/Navigation/Navbar.vue'
+import Footer from '~/components/Navigation/Footer.vue'
 
 @Component({
   components: {

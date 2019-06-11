@@ -1,4 +1,5 @@
 import NuxtConfiguration from '@nuxt/config'
+require('dotenv').config()
 
 const config: NuxtConfiguration = {
   mode: 'universal',
@@ -24,7 +25,8 @@ const config: NuxtConfiguration = {
   ** Environment variables
   */
   env: {
-    adminEmail: process.env.ADMIN_EMAIL || ''
+    ADMIN_EMAIL: process.env.ADMIN_EMAIL || '',
+    BASE_URL: process.env.BASE_URL || 'localhost:3000'
   },
   /*
   ** Global CSS
@@ -49,7 +51,8 @@ const config: NuxtConfiguration = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration
@@ -65,7 +68,17 @@ const config: NuxtConfiguration = {
     ** You can extend webpack config here
     */
     extend(config, ctx) { // eslint-disable-line @typescript-eslint/no-unused-vars
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        if (!config.module) config.module = { rules: [] }
 
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(ts|js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
   }
 }
